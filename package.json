@@ -5,6 +5,7 @@
     "tailwindcss": "^4.1.17"
   },
   "dependencies": {
+    "@anthropic-ai/claude-code": "^2.0.55",
     "@tailwindcss/postcss": "^4.1.17"
   }
 }

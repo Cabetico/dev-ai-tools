@@ -22,3 +22,13 @@ tailwind was initialized with that command but now is different.
 
 Solution: Tell chatgpt to use search to find the most up to date instructions for tailwindcss
 Answer: `npm install tailwindcss @tailwindcss/postcss`
+
+
+# Coding Assistants / IDEs
+
+- [Claude Code](https://www/anthropic.com/claude-code)
+
+```bash
+npm install -g @anthropic-ai/claude-code 
+``` 
+
