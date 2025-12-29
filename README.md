@@ -55,4 +55,4 @@ npm install -g @anthropic-ai/claude-code
   - Choose Machine Type
 
 #### Connect Antigravity
-  - must add new record to `.ssh/codespaces.auto` using `gh cs ssh --config -c <codespaces_name>`
+  - must add new record to `.ssh/codespaces.auto` using `gh cs ssh --config -c <codespaces_name>` this command will return the host information to be added int he `.ssg/config` file all you need is a codespace instance name that's it
