@@ -31,4 +31,28 @@ Answer: `npm install tailwindcss @tailwindcss/postcss`
 ```bash
 npm install -g @anthropic-ai/claude-code 
 ``` 
+# Antigravity
 
+#### Must Have 
+* github cli
+* antigravity
+* The goal is to connect through ssh
+  
+  - `gh auth login`
+    - `Where do you use GitHub? GitHub.com`
+    - `What is your preferred protocol for Git operations on this host? SSH`
+    - `Upload your SSH publick key to your GitHub account? <public_key_path>`
+    - `Title for your SSH key: GitHub CLI`
+    - `How would you like to autheticate GitHub CLI? Login with a web browser`
+
+    We should expect a
+    - `First copy your one-time code: `
+   
+#### Create codespaces
+  - run `gh cs create`
+  - Repository: <github_handler>/<repo_name>
+  - Branch
+  - Choose Machine Type
+
+#### Connect Antigravity
+  - must add new record to `.ssh/codespaces.auto` using `gh cs ssh --config -c <codespaces_name>`
