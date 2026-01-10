@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: Coding Interview API
+  description: API for managing coding interview sessions
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+paths:
+  /sessions:
+    post:
+      summary: Create a new interview session
+      operationId: createSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                language:
+                  type: string
+                  default: javascript
+      responses:
+        '201':
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+  /sessions/{id}:
+    get:
+      summary: Get session details
+      operationId: getSession
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Session details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+        '404':
+          description: Session not found
+
+components:
+  schemas:
+    Session:
+      type: object
+      properties:
+        id:
+          type: string
+        language:
+          type: string
+        code:
+          type: string
+        createdAt:
+          type: string
+          format: date-time

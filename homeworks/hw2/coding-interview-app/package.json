@@ -1,0 +1,17 @@
+{
+  "name": "coding-interview-app",
+  "version": "1.0.0",
+  "description": "An online platform for coding interviews with real-time collaborative code editing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "lint": "npm run lint --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
