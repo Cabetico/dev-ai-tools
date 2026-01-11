@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Button } from '../ui/Button';
 import { Input } from '../ui/Input';
 import { Send } from 'lucide-react';
@@ -11,7 +11,7 @@ interface MessageInputProps {
 
 export const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, onTyping, disabled }) => {
     const [message, setMessage] = useState('');
-    const typingTimeoutRef = useRef<NodeJS.Timeout>();
+    const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Message, User } from '../../types';
+import type { Message, User } from '../../types';
 import { formatMessageTime } from '../../utils/format';
 import { clsx } from 'clsx';
 

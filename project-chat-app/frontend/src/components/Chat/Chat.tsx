@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { RoomList } from './RoomList';
 import { MessageList } from './MessageList';
 import { MessageInput } from './MessageInput';
 import { useWebSocket } from '../../hooks/useWebSocket';
 import { useAuth } from '../../contexts/AuthContext';
-import { Message, User } from '../../types';
+import type { Message, User } from '../../types';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/Button';
 

@@ -1,4 +1,4 @@
-import { AuthResponse, User } from '../types';
+import type { AuthResponse, User } from '../types';
 
 export const login = async (username: string): Promise<AuthResponse> => {
     // Simulate API delay

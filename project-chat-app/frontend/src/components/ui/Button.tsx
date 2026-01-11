@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, forwardRef } from 'react';
+import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -8,11 +8,12 @@ function cn(...inputs: ClassValue[]) {
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'primary' | 'secondary' | 'ghost';
+    size?: 'sm' | 'md' | 'lg';
     isLoading?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ className, variant = 'primary', isLoading, children, disabled, ...props }, ref) => {
+    ({ className, variant = 'primary', size = 'md', isLoading, children, disabled, ...props }, ref) => {
         const baseStyles = "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background";
 
         const variants = {
@@ -21,10 +22,16 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             ghost: "hover:bg-gray-100 text-gray-700",
         };
 
+        const sizes = {
+            sm: "h-8 py-1 px-3 text-xs",
+            md: "h-10 py-2 px-4",
+            lg: "h-12 py-3 px-6 text-base",
+        };
+
         return (
             <button
                 ref={ref}
-                className={cn(baseStyles, variants[variant], "h-10 py-2 px-4", className)}
+                className={cn(baseStyles, variants[variant], sizes[size], className)}
                 disabled={disabled || isLoading}
                 {...props}
             >

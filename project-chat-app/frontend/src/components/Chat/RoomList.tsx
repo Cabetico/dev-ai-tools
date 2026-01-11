@@ -1,6 +1,5 @@
 import React from 'react';
-import { User } from '../../types';
-import { clsx } from 'clsx';
+import type { User } from '../../types';
 
 interface RoomListProps {
     users: User[];
